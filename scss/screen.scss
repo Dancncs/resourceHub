@@ -1,0 +1,17 @@
+@import "../node_modules/normalize.css/normalize";
+@import "commonStyle";
+
+// Core Partial
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "base";
+@import "layout";
+
+// Modules
+@import "modules/nav";
+@import "modules/home";
+// @import "modules/about";
+// @import "modules/client";
+// @import "modules/project";
+// @import "modules/contact";

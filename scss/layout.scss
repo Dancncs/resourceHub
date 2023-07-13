@@ -1,0 +1,121 @@
+/**
+ * Common Styles
+ */
+
+ video {
+ 	display: none !important;
+ 	max-width: 100%;
+ } // video
+
+button {
+	background: {
+		color: transparent;
+ 		image: none;
+ 	} // background
+ 	border: 0;
+ 	padding: 0;
+} // button
+
+.flexbox {
+	display: flex;
+} // flexbox
+
+.button {
+	background: site-color('day');
+	border: 1px solid site-color('indigo');
+	border-radius: 3px;
+	display: inline-block;
+	margin-top: 20px;
+	padding: 6px 23px;
+	
+	&:hover {
+		@include transition(all 0.35s ease-in-out);
+		background: site-color('indigo');
+		border: 1px solid site-color('day');
+		color: site-color('day');
+	} // :hover
+} // .button
+
+.mini_button {
+	color: site-color('indigo');
+	font: {
+		size: 0.85em;
+		weight: weight(bold);
+	} // font
+	position: relative;
+	
+	&:after {
+		color: site-color('indigo');
+		content: '\003E';
+		display: inline-block;
+		margin-left: 5px;
+		vertical-align: middle;
+	} // :after
+	
+	&:hover {
+		color: site-color('indigo');
+	} // :hover
+} // .mini_button
+
+.pageWrap {
+	margin-top: 50px;
+	margin-bottom: 50px;
+} // .pageWrap
+
+
+/**
+ * Website Main Header
+ */
+
+.site_header {
+	padding: 23px 0;
+	
+	.flexbox {
+		justify-content: space-between;
+		
+		@include breakpoint($desktop) {
+			justify-content: flex-start;
+		} // bp($desktop)
+	} // .flexbox
+} // .site_header
+
+
+/**
+ * Video + resources Columns
+ */
+
+.contents {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 30px;
+	
+	&_video {
+		// max-width: calc((100% / 12) * 9 - 8px);
+		width: 100%;
+	} // _video
+	
+	&_resources {
+		// max-width: calc((100% / 12) * 3 - 22px);
+		width: 100%;
+	} // _resources
+	
+	@include breakpoint($tablet) {
+		&_video {
+			max-width: calc((100% / 6) * 4 - 8px);
+		} // _video
+	
+		&_resources {
+			max-width: calc((100% / 6) * 2 - 22px);
+		} // _resources
+	} // bp($tablet)
+	
+	@include breakpoint($desktop) {
+		&_video {
+			max-width: calc((100% / 12) * 9 - 8px);
+		} // _video
+	
+		&_resources {
+			max-width: calc((100% / 12) * 3 - 22px);
+		} // _resources
+	} // bp($desktop)
+} // .contents

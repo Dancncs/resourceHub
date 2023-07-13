@@ -1,0 +1,246 @@
+/**
+ * Events' Slide
+ */
+
+.event_swiper-container {
+	padding-bottom: calc(1080 / 1920 * 100%);
+	max-height: 500px;
+	
+	img {
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	} // img
+	
+	.event_details {
+		@include transform(translate(-8%, -50%));
+		color: site-color('day');
+		position: absolute;
+		top: 50%;
+		left: 8%;
+		width: 45%;
+		
+		&-title {
+			@include fluid-type($narrow, $common, 18px, 42px);
+			font-weight: bold;
+			margin-bottom: 0;
+		} // title
+		
+		&-desc {
+			display: none;
+		} // -desc
+	} // .event_details
+	
+	@include breakpoint($desktop) {
+		padding-bottom: calc(1080 / 1920 * 70%);
+		
+		.event_details {
+			&-desc {
+				display: block;
+			} // -desc
+		} // .event_details
+	} // bp($desktop)
+} // .event_swiper-container
+
+/**
+ * Center Contents - Intro
+ */
+
+ .intro {
+ 	margin-bottom: 50px;
+ } // .intro
+
+/**
+ * Center Contents - Search Filter
+ */
+
+ .search_filter {
+ 	position: relative;
+ 	
+ 	textarea {
+ 		background: lighten(site-color('night'), 95);
+ 		border: 0;
+ 		display: block;
+ 		padding: 10px 5px;
+ 		width: 100%;
+ 		
+ 		&::placeholder {
+ 			color: lighten(site-color('gray'), 30);
+ 		} // ::placeholder
+ 	} // teaxarea
+ 	
+ 	button {
+ 		@include transform(translate(-3%, -50%));
+ 		position: absolute;
+ 		top: 50%;
+ 		right: 3%;
+ 		
+ 		svg {
+ 			color: rgba(site-color('gray'), 0.3);
+ 			width: 15px;
+ 			height: 15px;
+ 		} // svg
+ 	} // button
+ } // .search_filter
+
+/**
+ * Center Contents - Video Row
+ */
+
+ .videos_row {
+ 	h3 {
+ 		@include fluid-type($narrow, $common, 21px, 32px);
+ 	} // h3
+ 	
+ 	.video_swiper {
+ 		.flexbox {
+ 			flex-direction: column;
+ 			overflow: hidden;
+ 		} // .flexbox
+ 		
+ 		.video_link {
+ 			overflow: hidden;
+ 			padding-top: 56.25%;;
+ 			position: relative;
+ 			width: 100%;
+ 			z-index: 1;
+ 			
+ 			img {
+ 				object-fit: cover;
+ 				position: absolute;
+ 				top: 0;
+ 				left: 0;
+ 				width: 100%;
+ 				height: 100%;
+ 			} // img
+ 		} // .video_link
+ 		
+ 		.swiper-arrows {
+ 			@include transform(translate(0, -30%));
+ 			position: absolute;
+ 			top: 30%;
+ 			left: 0;
+ 			width: 100%;
+ 			height: 44px;
+ 			z-index: 10;
+ 		} // .swiper-arrows
+ 		
+ 		.video_desc {
+ 			h4 {
+ 				color: site-color('gray');
+ 				font: {
+ 					size: 1em;
+ 					weight: bold;
+				} // font
+ 				margin: 10px 0 0;
+ 			} // h4
+ 		} // .video_desc
+ 	} // .video_swiper
+ } // .videos_row
+ 		
+.video_pop {
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	max-width: 680px;
+	overflow: hidden;
+	position: relative;
+	
+	&-thumbnail {
+		position: relative;
+		padding-top: calc((350 / 680) * 100%);
+		
+		img {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		} // img
+	} // -thumbnail
+	
+	.info {
+		padding: 10px;
+		
+		&_announcement {
+			align-items: center;
+			display: flex;
+			gap: 0 10px;
+			
+			img {
+				width: 30px;
+			} // img
+		} // _announcement
+		
+		&_desc {
+			margin-top: 30px;
+			
+			.title {
+				font-weight: weight(bold);
+				margin-bottom: 0;
+			} // .title
+		} // desc
+		
+		&_tags {
+			margin-top: 20px;
+			
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				font-size: 0.85em;
+				gap: 0 10px;
+				
+				li {
+					border: 1px solid site-color('gray');
+					border-radius: 3px;
+					padding: 5px 8px;
+				} // li
+			} // ul
+		} // _tags
+	} // .info
+	
+	.mfp-close {
+		color: site-color('day');
+	} // .mfp-close
+} // .video_pop
+
+/**
+ * Center Contents - Resources
+ */
+
+.contents_resources {
+	h3 {
+ 		@include fluid-type($narrow, $common, 21px, 32px);
+ 	} // h3
+ 	
+ 	.new_resource {
+ 		margin-bottom: 50px;
+ 		
+ 		p {
+ 			margin-bottom: 0;
+ 		} // p
+ 		
+ 		.button {
+ 			margin-top: 0;
+ 		} // .button
+ 	} // .new_resource
+} // .contents_resources
+
+/**
+ * Magnific Popup
+ */
+
+ .white-popup {
+  position: relative;
+  background: #FFF;
+  width: auto;
+  margin: 20px auto;
+  
+  a {
+  	color: site-color('text');
+  } // a
+	
+	@include breakpoint($desktop) {} // bp($desktop)
+}

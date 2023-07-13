@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+
+	&:before, &:after {
+		box-sizing      	: border-box;
+	} // :before, :after
+} // *
+
+body {
+	font            : $mainFont;
+	color           : site-color('gray');
+} //body
+
+// The defined function part has been put to functions.scss
+#{headings()} {
+	font 				        : $mainFont;
+	line-height 				: 1.15;
+	margin 							: 2.75rem 0 1rem;
+} //headings
+
+h1 {
+	margin-top 					: 0;
+	font-size 					: 4.209em;
+} // h1
+
+h2 {
+	font-size 					: 3.157em;
+} // h2
+
+h3 {
+	font-size 					: 2.369em;
+} // h3
+
+h4 {
+	font-size 					: 1.777em;
+} // h4
+
+h5 {
+	font-size 					: 1.333em;
+} // h5
+
+p {
+	margin          : 0 0 1.25em;
+
+	&:last-child {
+		margin        : 0;
+	} // last-child
+} //p
+
+b, strong {
+	font-weight     : weight('bold');
+}
+
+small, .text_small {
+	font-size 					: 0.75em;
+}
+
+a {
+	@include transition(all 0.35s ease-in-out);
+	color 		       	 	: site-color('night');
+	outline         		: none;
+	text-decoration     : none;
+
+	&:hover {
+		color         : site-color('ocean');
+	} // :hover
+} // a
+
+ul {
+	list-style          : none;
+	margin 			    		: 0;
+	padding 		    		: 0;
+} // ul
+
+img {
+	display             : block;
+	max-width           : 100%;
+} // img
+
+figure {
+	margin              : 0;
+	padding             : 0;
+} // figure
+
+// Clearfix
+.clearfix {
+	&:after {
+		content         	: '';
+		display         	: table;
+		clear           	: both;
+	} // :after
+} // .clearfix
+
+.wrap {
+	transition: all 0.35s ease-in-out;
+	padding-left    		: 15px;
+	padding-right   		: 15px;
+} // .wrap
+
+.outer_wrap {
+	transition					: all 0.35s ease-in-out;
+	margin 							: 0 auto;
+	width 							: 100%;
+	
+	@include breakpoint($tablet) {
+		max-width 				: 750px;
+	} // bp($tablet)
+	
+	@include breakpoint($desktop) {
+		max-width 				: 970px;
+	} // bp($desktop)
+	
+	@include breakpoint($common) {
+		max-width 				: 1280px;
+	} // bp($common)
+} // .outer-wrap
