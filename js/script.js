@@ -1,4 +1,19 @@
-// Dynamic Change of Text color depending on background image
+jQuery(document).ready(function($) {
+
+  // To replace IMG inside carousel with background image
+  var slideIMG = $('.event_swiper-container img');
+  slideIMG.each(function() {
+    var imgSrc = $(this).attr('src');
+    $(this).parent().css({
+      'background-image': 'url(' + imgSrc + ')'
+    });
+    $(this).remove();
+  });
+
+});
+
+// Change color text dynamically depending on background
+
 const getYiq = (imgData) => {
 
   // Calculate average color of canvas
@@ -26,7 +41,6 @@ const getYiq = (imgData) => {
     // Increment the total number of
     // values of rgb colours
     count++;
-
   }
 
   // Calculating average
@@ -37,7 +51,6 @@ const getYiq = (imgData) => {
   // Getting the contrast 
   // Depending on rgb colors
   return yiq = ((rgb.r * 299) + (rgb.g * 587) + (rgb.b * 114)) / 1000;
-
 }
 
 const paintCanvas = (img, bckg, bckg_measures, text, text_measures) => {
@@ -65,16 +78,14 @@ const paintCanvas = (img, bckg, bckg_measures, text, text_measures) => {
 
   // Check contrast
   text.style.color = yiq >= 128 ? 'black' : 'white';
-
-
 }
 
 const changeTextColor = () => {
 
   // We need to cut the background behind the text
   // and get the average color of the pixels
-  let text = document.querySelectorAll('.event_details-title, .event_details-desc')[0];
-  let bckg = document.querySelectorAll('.event_swiper-container')[0];
+  let text = document.getElementsByClassName('event_details-desc')[0];
+  let bckg = document.getElementsByClassName('event_swiper-container')[0];
 
   // Getting measures of text and background
   let text_measures = text.getBoundingClientRect();
@@ -91,7 +102,6 @@ const changeTextColor = () => {
   img.width = bckg_measures.width;
 
   img.onload = () => paintCanvas(img, bckg, bckg_measures, text, text_measures);
-
 }
 
 window.onload = () => changeTextColor();
@@ -120,24 +130,24 @@ var swiper = new Swiper(".video_swiper", {
   },
   breakpoints: {
     320: {
-      slidesPerView: 2,
-      spaceBetween: 20
+      slidesPerView: 1,
+      spaceBetween: 10
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 20
+      slidesPerView: 2,
+      spaceBetween: 10
     },
     980: {
-      slidesPerView: 4,
-      spaceBetween: 20
+      slidesPerView: 3,
+      spaceBetween: 10
     },
     1366: {
-      slidesPerView: 5,
-      spaceBetween: 20
+      slidesPerView: 3,
+      spaceBetween: 10
     },
     2000: {
-      slidesPerView: 5,
-      spaceBetween: 20
+      slidesPerView: 3,
+      spaceBetween: 10
     }
   }
 });
