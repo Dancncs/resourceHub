@@ -2,11 +2,6 @@
  * Events' Slide
  */
 
- .event_slides {
- 	// height: 100%;
- 	// max-height: 500px;
- } // .event_slides
- 
  .event_swiper {
  	&-container {
  		background: {
@@ -45,8 +40,6 @@
 	
 	@include breakpoint($desktop) {
 		.event_details {
-			// width: 35%;
-			
 			&-copies {
 				display: block;
 				margin-top: 20px;
