@@ -1,4 +1,21 @@
 jQuery(document).ready(function($) {
+  // Toggle menu on mobile
+  const toggle = $('.toggleWrap');
+  const menu = $('.header_nav, .toggle');
+  const menuClick = $('.menu a');
+  toggle.click(function() {
+
+    if (menu.hasClass('active')) {
+      menu.removeClass('active');
+    } else {
+      menu.addClass('active');
+    }
+
+  });
+
+  // menuClick.click(function() {
+  //   menu.removeClass('active');
+  // });
 
   // To replace IMG inside carousel with background image
   var slideIMG = $('.event_swiper-container img');

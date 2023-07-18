@@ -13,8 +13,9 @@
 
 
 	<link rel="stylesheet" href="//www.vmware.com/content/dam/vmwaredesigns/scrapercontent/responsive.css">
+	<!-- <link href="//vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" /> -->
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/magnific-popup.css">
 	<link rel="stylesheet" href="css/screen.css" />
 
 	<!--[if lt IE 9]>
@@ -30,7 +31,7 @@
 	<header class="site_header outer_wrap">
 		<div class="wrap">
 			<div class="header_nav flexbox"> <!-- Add Active -->
-				<a href="#" class="home_link">
+				<a href="/" class="home_link">
 					<img src="images/vmware.svg" alt="VMware">
 				</a>
 				<nav class="main_nav">
@@ -116,7 +117,7 @@
 			
 			<section class="search_filter">
 				<form action="">
-					<textarea rows="1" placeholder="Ask me anything..."></textarea>
+					<textarea rows="1" placeholder="Search our on-demand videos!"></textarea>
 					<button class="search_filter-button">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" class="h-4 w-4 m-1 md:m-0" stroke-width="2">
 							<path d="M.5 1.163A1 1 0 0 1 1.97.28l12.868 6.837a1 1 0 0 1 0 1.766L1.969 15.72A1 1 0 0 1 .5 14.836V10.33a1 1 0 0 1 .816-.983L8.5 8 1.316 6.653A1 1 0 0 1 .5 5.67V1.163Z" fill="currentColor"></path>
@@ -147,7 +148,9 @@
 							    		<p>Brief description stay</p>
 							    	</div>
 							    	<div id="video1" class="white-popup mfp-hide video_pop">
-											<div class="video_pop-thumbnail"><img src="images/uma.jpg" alt="Thumbnail"></div>
+											<div class="video_pop-thumbnail">
+												<iframe src="https://www.youtube.com/embed/4rsQ91jUOf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+											</div>
 											<div class="info">
 												<div class="info_announcement">
 													<a href="https://videos.vmware.com/" target="_blank"><img src="images/play.png" alt="Play Button"></a>
@@ -540,6 +543,7 @@
 	<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
 	<script src="//www.vmware.com/bin/vmware/template/scrapercontent.en.js"></script>
 	<script src="//www.vmware.com/content/dam/vmwaredesigns/scrapercontent/responsive.js"></script>
+	<!-- <script src="//vjs.zencdn.net/8.3.0/video.min.js"></script> -->
 	<script src="//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	<script src="js/script.js"></script>

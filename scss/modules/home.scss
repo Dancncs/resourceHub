@@ -10,7 +10,7 @@
  			position: center center;
  		} // background
  		height: 100%;
- 		padding-bottom: calc(500 / 1920 * 100%);
+ 		padding-bottom: calc(1080 / 1920 * 100%);
  		position: relative;
  	} // -container
  	
@@ -39,6 +39,10 @@
 	} // .event_details
 	
 	@include breakpoint($desktop) {
+		&-container {
+	 		padding-bottom: calc(760 / 1920 * 100%);
+	 	} // -container
+	 		
 		.event_details {
 			&-copies {
 				display: block;
@@ -48,6 +52,10 @@
 	} // bp($desktop)
 	
 	@include breakpoint($common) {
+		&-container {
+	 		padding-bottom: calc(500 / 1920 * 100%);
+	 	} // -container
+	 	
 		.event_details {
 			width: 35%;
 		} // .event_details
@@ -72,20 +80,27 @@
  	textarea {
  		background: lighten(site-color('night'), 95);
  		border: 0;
+ 		border-radius: 3px;
  		display: block;
- 		padding: 10px 5px;
+ 		outline: none;
+ 		padding: 10px;
  		width: 100%;
  		
  		&::placeholder {
  			color: lighten(site-color('gray'), 30);
  		} // ::placeholder
+ 		
+ 		&:focus {
+		 	filter: drop-shadow(0 0 3px rgba(site-color('night'), 0.25));
+ 		} // :focus
  	} // teaxarea
  	
  	button {
- 		@include transform(translate(-3%, -50%));
+ 		@include transform(translateY(-50%));
  		position: absolute;
  		top: 50%;
- 		right: 3%;
+ 		right: 10px;
+ 		height: 15px;
  		
  		svg {
  			color: rgba(site-color('gray'), 0.3);
@@ -292,16 +307,26 @@
 
 	&-thumbnail {
 		position: relative;
-		padding-top: calc((350 / 680) * 100%);
+		padding-top: 56.25%;
+		height: 0;
+		overflow: hidden;
 
-		img {
-			object-fit: cover;
+		// img {
+		// 	object-fit: cover;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// } // img
+		
+		iframe {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-		} // img
+		} // iframe
 	} // -thumbnail
 
 	.info {
@@ -333,7 +358,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				font-size: 0.85em;
-				gap: 0 10px;
+				gap: 10px;
 
 				li {
 					border: 1px solid site-color('gray');
