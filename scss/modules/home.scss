@@ -4,30 +4,36 @@
 
  .event_swiper {
  	&-container {
+ 		align-items: center;
  		background: {
  			repeat: no-repeat;
  			size: cover;
  			position: center center;
  		} // background
- 		height: 100%;
- 		padding-bottom: calc(1080 / 1920 * 100%);
+ 		display: flex;
+ 		min-height: 300px;
+ 		// padding-bottom: calc(1080 / 1920 * 100%);
  		position: relative;
  	} // -container
  	
  	.event_details {
-		@include transform(translate(-8%, -50%));
-		color: site-color('day');
-		position: absolute;
-		top: 50%;
-		left: 8%;
-		width: 45%;
-		
+ 		position: relative;
+ 		
 		&-desc {
-			@include fluid-type($narrow, $common, 25px, 42px);
-			font-weight: bold;
-			line-height: 1.25;
-			margin-bottom: 0;
+			@include transform(translate(-1%, -50%));
+			color: site-color('day');
+			padding-left: 15px;
+			position: absolute;
+			top: 50%;
+			left: 1%;
+			width: 50%;
 		} // -desc
+		
+		&-title {
+			@include fluid-type($narrow, $common, 16px, 40px);
+			line-height: 1.15;
+			margin: 0;
+		} // -title
 		
 		&-copies {
 			display: none;
@@ -40,10 +46,15 @@
 	
 	@include breakpoint($desktop) {
 		&-container {
-	 		padding-bottom: calc(760 / 1920 * 100%);
+			min-height: 380px;
+	 		// padding-bottom: calc(760 / 1920 * 100%);
 	 	} // -container
 	 		
 		.event_details {
+			&-desc {
+				width: 45%;
+			} // -desc
+			
 			&-copies {
 				display: block;
 				margin-top: 20px;
@@ -53,13 +64,22 @@
 	
 	@include breakpoint($common) {
 		&-container {
-	 		padding-bottom: calc(500 / 1920 * 100%);
+	 		// padding-bottom: calc(500 / 1920 * 100%);
 	 	} // -container
 	 	
 		.event_details {
-			width: 35%;
+			&-desc {
+				// width: 35%;
+			} // -desc
 		} // .event_details
 	} // bp($common)
+	
+	@include breakpoint($widescn) {
+		&-container {
+			// min-height: 380px;
+	 		// padding-bottom: calc(380 / 1920 * 100%);
+	 	} // -container
+	} // bp($widescn)
  } // .event_swiper
 
 /**
@@ -77,13 +97,15 @@
  .search_filter {
  	position: relative;
  	
- 	textarea {
- 		background: lighten(site-color('night'), 95);
+ 	input {
+		@include transition(all 0.15s ease-in-out);
+ 		background: site-color('day');
  		border: 0;
  		border-radius: 3px;
+	 	box-shadow: 0px 8px 16px rgba(site-color('gray'), 0.48);
  		display: block;
  		outline: none;
- 		padding: 10px;
+ 		padding: 15px 10px;
  		width: 100%;
  		
  		&::placeholder {
@@ -91,7 +113,8 @@
  		} // ::placeholder
  		
  		&:focus {
-		 	filter: drop-shadow(0 0 3px rgba(site-color('night'), 0.25));
+ 			border: 3px solid lighten(site-color('ocean'), 40);
+		 	box-shadow: none;
  		} // :focus
  	} // teaxarea
  	
@@ -119,6 +142,7 @@
 	 	
  	h3 {
  		@include fluid-type($narrow, $common, 16px, 32px);
+ 		color: site-color('night');
  	} // h3
 
  	.content_videos-col {
