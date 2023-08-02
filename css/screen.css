@@ -977,7 +977,8 @@ button {
  * Center Content - Videos + Resources
  */
 .videos_row {
-  gap: 0 15px;
+  flex-wrap: wrap;
+  gap: 0 20px;
 }
 
 .videos_row h3 {
@@ -1001,11 +1002,11 @@ button {
 }
 
 .videos_row .content_videos-col {
-  width: calc((100% / 4) * 2);
+  width: calc((100% / 4) * 2 - 10px);
 }
 
 .videos_row .content_source-col {
-  width: calc((100% / 4) * 2);
+  width: calc((100% / 4) * 2 - 10px);
 }
 
 .videos_row .content_source-col .new_resource p {
@@ -1015,7 +1016,7 @@ button {
 
 .videos_row .content_source-col .new_resource-img {
   margin-bottom: 10px;
-  padding-top: 62%;
+  padding-top: 56%;
   position: relative;
 }
 
@@ -1028,22 +1029,19 @@ button {
   height: 100%;
 }
 
-.videos_row:not(:first-child) .content_source-col h3 {
-  visibility: hidden;
+.videos_row:not(:first-child) h3 {
+  flex-basis: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .videos_row {
-    gap: 0 20px;
-  }
   .videos_row .content_videos-col {
-    width: calc(100% / 6 * 4);
+    width: calc((100% / 6 * 4) - 10px);
   }
   .videos_row .content_source-col {
     width: calc((100% / 6 * 2) - 10px);
   }
   .videos_row .content_source-col .new_resource-img {
-    padding-top: 60%;
+    padding-top: 55%;
   }
   .videos_row:not(:first-child) .content_source-col h3 {
     max-height: 10%;
@@ -1052,16 +1050,10 @@ button {
 
 @media screen and (min-width: 980px) {
   .videos_row .content_videos-col {
-    width: calc(100% / 12 * 9);
+    width: calc(100% / 12 * 9 - 10px);
   }
   .videos_row .content_source-col {
-    width: calc((100% / 12 * 3) - 15px);
-  }
-}
-
-@media screen and (min-width: 1366px) {
-  .videos_row .content_source-col .new_resource-img {
-    padding-top: 59%;
+    width: calc((100% / 12 * 3) - 10px);
   }
 }
 
@@ -1136,7 +1128,7 @@ button {
 .video_swiper .swiper-button-next {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  top: 90px;
+  top: 45px;
 }
 
 .video_swiper .swiper-button-prev:after,
@@ -1153,6 +1145,20 @@ button {
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   background: black;
+}
+
+@media screen and (min-width: 768px) {
+  .video_swiper .swiper-button-prev,
+.video_swiper .swiper-button-next {
+    top: 70px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .video_swiper .swiper-button-prev,
+.video_swiper .swiper-button-next {
+    top: 90px;
+  }
 }
 
 .video_swiper .swiper-button-disabled {
