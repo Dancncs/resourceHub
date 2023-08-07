@@ -182,6 +182,27 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/event_banner.jpg" : {
+      "ft" : 16384,
+      "iS" : 536549,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/event_banner.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/images\/event_banner.zip" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/event_banner.zip",
+      "oF" : 0
+    },
     "\/images\/eventHero.jpg" : {
       "ft" : 16384,
       "iS" : 156881,
