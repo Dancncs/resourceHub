@@ -2,6 +2,7 @@
 @import "commonStyle";
 
 // Core Partial
+@import "font";
 @import "variables";
 @import "functions";
 @import "mixins";
@@ -11,7 +12,7 @@
 // Modules
 @import "modules/nav";
 @import "modules/home";
-// @import "modules/about";
+@import "modules/resources";
 // @import "modules/client";
 // @import "modules/project";
 // @import "modules/contact";

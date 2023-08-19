@@ -1,0 +1,15 @@
+.resources_row {
+	flex-wrap: wrap;
+	
+	h3 {
+		@include fluid-type($narrow, $common, 16px, 32px);
+		color: site-color('night');
+		width: 100%;
+	} // h3
+} // .resources_row
+
+.resources_item {
+	p {
+		margin-bottom: 0;
+	} // p
+} // .resources_item

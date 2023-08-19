@@ -245,6 +245,7 @@
  				@include transform(translate(-50%, -50%));
  				content: '';
  				display: inline-block;
+ 				filter: drop-shadow(1px 1px 3px rgba(site-color('night'), 0.45));
  				opacity: 0;
  				position: absolute;
  				top: 50%;
@@ -269,7 +270,7 @@
  			
  			&:hover {
  				&:before, &:after {
- 					opacity: 0.65;
+ 					opacity: 0.85;
  				} // :before, :after
  			} // :hover
  		} // .video_link
@@ -281,37 +282,7 @@
 			} // font
  			margin: 0;
  		} // h4
- 	} // -container
-
- 	// Center Content - Swiper ======
- 	.swiper-button-prev,
- 	.swiper-button-next {
- 		background: rgba(site-color('night'), 0.5);
- 		border-radius: 3px;
- 		top: 45px;
- 		
- 		&:after {
- 			color: site-color('day');
- 			font-size: 2em;
- 		} // :after
- 		
- 		&:hover {
- 			@include transition(all 0.35s ease-in-out);
- 			background: rgba(site-color('night'), 1);
- 		} // :hover
- 		
- 		@include breakpoint($tablet) {
- 			top: 70px;
- 		} // bp($tablet)
- 		
- 		@include breakpoint($common) {
- 			top: 90px;
- 		} // bp($common)
- 	} // .swiper-button-prev, .swiper-button-next
- 	
- 	.swiper-button-disabled {
- 		display: none;
- 	} // .swiper-button-disabled
+ 	} // -container 	
  } // .video_swiper
 
  // Center Content - MagnificPopup ======
@@ -358,6 +329,12 @@
 				font-weight: weight(bold);
 				margin-bottom: 0;
 			} // .title
+			
+			ul {
+				list-style: inherit;
+				margin-left: 20px;
+				margin-bottom: 20px;
+			} // ul
 		} // desc
 
 		&_tags {
