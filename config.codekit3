@@ -575,6 +575,14 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/images\/event_banner.zip" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/images\/event_banner.zip",
+      "oF" : 0
+    },
     "\/images\/eventHero.jpg" : {
       "ft" : 16384,
       "iS" : 156881,

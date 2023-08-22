@@ -972,13 +972,13 @@ button {
 
 @media screen and (min-width: 340px) {
   .event_swiper .event_details-title {
-    font-size: calc(16px + 24 * ((100vw - 340px) / 1026));
+    font-size: calc(16px + 16 * ((100vw - 340px) / 1026));
   }
 }
 
 @media screen and (min-width: 1366px) {
   .event_swiper .event_details-title {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 
